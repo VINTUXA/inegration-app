@@ -1,6 +1,7 @@
 package com.example.service.integrationapp.controller;
 
 import com.example.service.integrationapp.clients.OkHttpClientSender;
+import com.example.service.integrationapp.clients.OpenFeignClient;
 import com.example.service.integrationapp.clients.RestTemplateClient;
 import com.example.service.integrationapp.clients.WebClientSender;
 import com.example.service.integrationapp.model.EntityModel;
@@ -19,7 +20,8 @@ import java.util.UUID;
 public class EntityClientController {
 //    private final OkHttpClientSender client;
 //    private final RestTemplateClient client;
-    private final WebClientSender client;
+//    private final WebClientSender client;
+    private final OpenFeignClient client;
 
     @GetMapping
     public ResponseEntity<List<EntityModel>> entityList(){

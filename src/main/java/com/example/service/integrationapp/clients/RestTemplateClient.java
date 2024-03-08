@@ -3,7 +3,6 @@ package com.example.service.integrationapp.clients;
 import com.example.service.integrationapp.model.EntityModel;
 import com.example.service.integrationapp.model.UpsertEntityRequest;
 import lombok.RequiredArgsConstructor;
-import okhttp3.Response;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.io.Resource;
