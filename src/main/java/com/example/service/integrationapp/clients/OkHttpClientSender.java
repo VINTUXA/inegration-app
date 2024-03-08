@@ -53,11 +53,12 @@ public class OkHttpClientSender {
 
     public Resource downloadFile(String filename){
         Request request = new Request.Builder()
-                .url(baseUrl + "/api/v1/download/" + filename)
+                .url(baseUrl + "/api/v1/file/download/" + filename)
                 .header("Accept", "application/octet-stream")
                 .get()
                 .build();
         try (Response response = httpClient.newCall(request).execute()){
+            System.out.println(response.toString());
             if (!response.isSuccessful()){
                 log.error("Error trying to download file!");
                 return null;
