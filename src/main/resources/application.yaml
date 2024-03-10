@@ -1,3 +1,40 @@
+spring:
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_db
+    username: postgres
+    password: postgres
+    hikari:
+      schema: app_schema
+      connection-init-sql: CREATE SCHEMA IF NOT EXISTS app_schema
+      connection-timeout: 10000
+
+#app:
+#  integration:
+#    base-url: http://localhost:8082
+#
+#    cache:
+#      cacheType: inMemory
+#      cache-names:
+#        - databaseEntities
+#        - databaseEntityByName
+#      caches:
+#        databaseEntities:
+#          expire: 4s
+#        databaseEntityByName:
+#          expire: 10s
 app:
   integration:
     base-url: http://localhost:8082
+
+  cache:
+    cacheType: inMemory
+    cache-names:
+      - databaseEntities
+      - databaseEntityByName
+    caches:
+      databaseEntities:
+        expire: 10s # Увеличьте время жизни кэша до 10 секунд
+      databaseEntityByName:
+        expire: 10s
