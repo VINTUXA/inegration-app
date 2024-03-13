@@ -37,7 +37,10 @@ public class EntityClientController {
     public ResponseEntity<EntityModel> entityByName(@PathVariable String name){
         return ResponseEntity.ok(EntityModel.from(service.findByName(name)));
     }
-
+    @GetMapping("/by-id/{id}")
+    public ResponseEntity<EntityModel> entityById(@PathVariable UUID id){
+        return ResponseEntity.ok(EntityModel.from(service.findById(id)));
+    }
     @PostMapping
     public ResponseEntity<EntityModel> createEntity(@RequestBody UpsertEntityRequest request){
         var newEntity = client.createEntity(request);

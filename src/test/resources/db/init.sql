@@ -1,0 +1,3 @@
+INSERT INTO entities(id, name, date) VALUES('fd2d8f0e-d000-4e4e-bf63-0687fbfef2b1', 'testName_1', '2100-03-03 00:00:00.782317 +00:00');
+INSERT INTO entities(id, name, date) VALUES('fd2d8f0e-d000-4e4e-bf63-0687fbfef2b2', 'testName_2', '2100-03-03 00:00:00.782317 +00:00');
+INSERT INTO entities(id, name, date) VALUES('fd2d8f0e-d000-4e4e-bf63-0687fbfef2b3', 'testName_3', '2100-03-03 00:00:00.782317 +00:00');
